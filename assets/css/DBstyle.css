@@ -1,0 +1,357 @@
+/* Vodyrizam - Front End Developer
+for DanaBijak.com 02/10/2018 
+
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1000px) {
+  html {
+    overflow-x: hidden !important;
+  }
+}
+html {
+  font-size: 100%;
+}
+body {
+  background: #f9f9f9;
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 16px;
+  overflow-x: hidden !important;
+  line-height: 1.7;
+  color: #404041;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+input[type="submit"], button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="text"]:disabled {
+    background: none;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+p {
+  line-height: 1.5;
+}
+a {
+  color: #ee3d41;
+  transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -webkit-transition: color .15s ease-in-out;
+  -o-transition: color .15s ease-in-out;
+}
+a:hover,
+a:focus {
+  color: #e83534;
+  text-decoration: none;
+}
+a:focus, .btn.focus, .btn:focus, .btn:hover,
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+  /*outline: thin dotted;
+  outline-offset: -4px;*/
+  outline: none;
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  /*outline: thin dotted;
+  outline-offset: -4px;*/
+  outline: none;
+
+}
+
+h1,h2,h3 {
+  font-weight: 700;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
+/* ========================================================================================================================================
+ Fonts
+ ========================================================================================================================================= */
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fontface/HelveticaNeueLTStd-Cn.eot');
+  src: url('../../assets/fontface/HelveticaNeueLTStd-Cn.eot?#iefix') format('embedded-opentype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Cn.woff') format('woff'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Cn.ttf') format('truetype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Cn.svg') format('svg'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Cn') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fontface/HelveticaNeueLTStd-BdCn.eot');
+  src: url('../../assets/fontface/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.woff') format('woff'),
+       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.ttf') format('truetype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.svg') format('svg'),
+       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fontface/HelveticaNeueLTStd-Bd.eot');
+  src: url('../../assets/fontface/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Bd.woff') format('woff'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Bd.ttf') format('truetype'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Bd.svg') format('svg'),
+       url('../../assets/fontface/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rsvicon';
+  src: url('../../assets/fontface/rsvicon.eot');
+  src: url('../../assets/fontface/rsvicon.eot.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fontface/rsvicon.woff') format('woff'),
+  url('../../assets/fontface/rsvicon.ttf') format('truetype'),
+  url('../../assets/fontface/rsvicon.svg') format('svg'),
+  url('../../assets/fontface/rsvicon.svg#rsvicon') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ==========================================================================
+   Icon
+========================================================================== */
+
+.ico {
+  background: url(../../assets/img/icon.png) no-repeat;
+  display: inline-block;
+}
+i.ico {
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  margin: 10px auto 0;
+}
+
+
+/* Mulai nangkene
+==================================*/
+
+#wrapper {
+  overflow:hidden;
+}
+
+.content-box {
+  padding: 30px 10px;
+  overflow: hidden;
+  background: #f9f9f9;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+.container {
+  padding: 0 15px;
+}
+.container-fluid {
+  padding: 0;
+}
+.container-fluid.fluid-wrapper {
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+.container-fluid.fluid-wrapper > .container {
+  padding: 0;
+}
+
+.cRow {
+  justify-content: center;
+  display: flex;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 1000px;
+    padding: 0;
+  }
+  .container-fluid.fluid-wrapper > .container {
+    padding: 0 15px;
+  }
+}
+
+/*Distance
+-----------------------------------------*/
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+.m-b-25 {
+  margin-bottom: 25px;
+}
+
+.pZ {
+  padding: 0;
+}
+.p-lZ {
+  padding-right: 0;
+}
+
+.p-rZ {
+  padding-right: 0;
+}
+
+.p-l-45 {
+  padding-left: 45px;
+}
+
+/* Navbar
+-----------------------------------------*/
+
+.navbar {
+  /*background: #333;*/
+  border-radius: 0;
+  padding: 30px 15px;
+  height: auto;
+  border: none;
+}
+
+.navbar-nav.nav-menu {
+  margin-right: -30px;
+}
+
+.nav-menu li {
+  
+}
+
+.nav-menu li.activation {
+  background: #ccc;
+}
+
+.nav-menu li >a {
+  color: #fff;
+  padding: 25px 20px;
+}
+
+.navbar-brand {
+  height: auto;
+  padding: 10px 15px;  
+  width: 200px;
+} 
+
+
+/* Section
+-----------------------------------------*/
+
+.headerHome {
+  background: linear-gradient(rgba(59, 187, 180, .65), rgba(59, 187, 180, .65)), url(../../assets/img/skylineback.jpg) no-repeat;
+  background-size: cover;
+  /*height: calc(100vh - 54px);*/
+  height: 100vh;
+}
+
+.jumbotron {
+  background: none;
+  color: #FFF;
+  padding-top: 250px;
+}
+
+
+
+/* Carousel
+-----------------------------------------*/
+.carousel.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity
+}
+
+.carousel.carousel-fade .carousel-inner .active {
+    opacity: 1
+}
+
+.carousel.carousel-fade .carousel-inner .active.left,
+.carousel.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.carousel.carousel-fade .carousel-inner .next.left,
+.carousel.carousel-fade .carousel-inner .prev.right {
+    opacity: 1
+}
+
+.carousel.carousel-fade .carousel-control {
+    z-index: 3
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background: 0 0
+}
+
+.carousel-control {
+    width: 8%
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-fade .carousel-inner>.item.active.left,
+    .carousel-fade .carousel-inner>.item.active.right,
+    .carousel-fade .carousel-inner>.item.next,
+    .carousel-fade .carousel-inner>.item.prev {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    .carousel-fade .carousel-inner>.item.active,
+    .carousel-fade .carousel-inner>.item.next.left,
+    .carousel-fade .carousel-inner>.item.prev.right {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+
+/* Footer
+-----------------------------------------*/
