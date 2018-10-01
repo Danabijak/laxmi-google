@@ -213,6 +213,11 @@ i.ico {
   }
 }
 
+.btn-outline-primary {
+  border-color: #FFF;
+}
+
+
 /*Distance
 -----------------------------------------*/
 .m-t-20 {
@@ -274,6 +279,18 @@ i.ico {
   width: 200px;
 } 
 
+.nav-link {
+  text-transform: capitalize;
+  color: #FFF;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
 
 /* Section
 -----------------------------------------*/
@@ -291,6 +308,17 @@ i.ico {
   padding-top: 250px;
 }
 
+
+footer {
+    background: #236d69;
+    color: #dcecf5;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer ol {
+  padding-left: 25px;
+}
 
 
 /* Carousel
