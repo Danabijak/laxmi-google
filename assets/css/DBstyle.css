@@ -93,56 +93,6 @@ b, strong {
   font-weight: 500;
 }
 
-/* ========================================================================================================================================
- Fonts
- ========================================================================================================================================= */
-
-@font-face {
-  font-family: 'HelveticaNeue';
-  src: url('../../assets/fontface/HelveticaNeueLTStd-Cn.eot');
-  src: url('../../assets/fontface/HelveticaNeueLTStd-Cn.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Cn.woff') format('woff'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Cn.ttf') format('truetype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Cn.svg') format('svg'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Cn') format('svg');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'HelveticaNeue';
-  src: url('../../assets/fontface/HelveticaNeueLTStd-BdCn.eot');
-  src: url('../../assets/fontface/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.woff') format('woff'),
-       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.ttf') format('truetype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.svg') format('svg'),
-       url('../../assets/fontface/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'HelveticaNeue';
-  src: url('../../assets/fontface/HelveticaNeueLTStd-Bd.eot');
-  src: url('../../assets/fontface/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Bd.woff') format('woff'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Bd.ttf') format('truetype'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Bd.svg') format('svg'),
-       url('../../assets/fontface/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'rsvicon';
-  src: url('../../assets/fontface/rsvicon.eot');
-  src: url('../../assets/fontface/rsvicon.eot.eot?#iefix') format('embedded-opentype'),
-  url('../../assets/fontface/rsvicon.woff') format('woff'),
-  url('../../assets/fontface/rsvicon.ttf') format('truetype'),
-  url('../../assets/fontface/rsvicon.svg') format('svg'),
-  url('../../assets/fontface/rsvicon.svg#rsvicon') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 /* ==========================================================================
    Icon
@@ -213,6 +163,12 @@ i.ico {
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
 .btn-outline-primary {
   border-color: #FFF;
 }
@@ -251,7 +207,7 @@ i.ico {
 .navbar {
   /*background: #333;*/
   border-radius: 0;
-  padding: 15px 30px;
+  padding: 0 15px;
   height: auto;
   border: none;
 }
@@ -275,8 +231,8 @@ i.ico {
 
 .navbar-brand {
   height: auto;
-  padding: 10px 15px;  
-  width: 200px;
+  padding: 0;  
+  width: 180px;
 } 
 
 .nav-link {
@@ -285,10 +241,21 @@ i.ico {
 }
 
 @media (min-width: 992px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+/*  .navbar-brand {
+    padding: 10px 15px;
+  } */
+
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
   }
+}
+
+.navbar-toggler {
+    border: 1px solid #FFF;
 }
 
 
@@ -308,6 +275,43 @@ i.ico {
   padding-top: 250px;
 }
 
+.content-home {
+  padding: 4.5rem 0 2.5rem;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.content-home h2, .content-home h3, .content-home h4 {
+  margin-bottom: 4rem;
+  color: #1abc9c;
+}
+
+.content-home h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+.card {
+  background: none;   
+  border: none; 
+}
+
+.card-img-top {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 170px;
+  }
+}
 
 footer {
     background: #236d69;
