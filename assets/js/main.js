@@ -1,11 +1,7 @@
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 200) {
-		$('.navbar').css('opacity', '0');
-	} else {
-		$('.navbar').css('background', 'none');
-		$('.navbar').css('opacity', '1');
-	} if ($(this).scrollTop() > 550) {
-		$('.navbar').css('opacity', '1');
-		$('.navbar').css('background', 'rgba(59, 187, 180, .9)');
-	} 
-});
+$(function() {
+    $(".navbar.fixed-top").length && $(window).on("scroll touchmove", function(e) {
+        if (!($("#main-page").length <= 0)) {
+            $(this).scrollTop() > 200 ? $(".navbar.fixed-top").addClass("switch-color") : $(".navbar.fixed-top").removeClass("switch-color")
+        }
+    })
+})

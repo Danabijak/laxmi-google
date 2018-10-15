@@ -93,10 +93,45 @@ h1 {
   font-size: 2rem;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
 b, strong {
   font-weight: 500;
 }
 
+.btn-primary {
+  width: 200px;
+  border-color: #1abc9c;
+  margin-bottom: .5rem;
+}
+
+.btn-primary:active, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
+    background: #0aac8c;
+    border-color: #0aac8c;
+}
+
+.btn-outline-primary {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  color: #1abc9c;
+  border: 1px solid #0aac8c;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:not(:disabled):not(.disabled):active {
+  background: #1abc9c;
+  border-color: #0aac8c;
+  color: #fff;
+}
+
+.btn-outline-default {
+  border-color: #FFF;
+}
 
 /* ==========================================================================
    Icon
@@ -173,38 +208,6 @@ i.ico {
   }
 }
 
-.btn-outline-primary {
-  border-color: #FFF;
-}
-
-
-/*Distance
------------------------------------------*/
-.m-t-20 {
-  margin-top: 20px;
-}
-.m-t-30 {
-  margin-top: 30px;
-}
-.m-b-25 {
-  margin-bottom: 25px;
-}
-
-.pZ {
-  padding: 0;
-}
-.p-lZ {
-  padding-right: 0;
-}
-
-.p-rZ {
-  padding-right: 0;
-}
-
-.p-l-45 {
-  padding-left: 45px;
-}
-
 /* Navbar
 -----------------------------------------*/
 
@@ -213,14 +216,26 @@ i.ico {
   padding: 0 15px;
   height: auto;
   border: none;
-  transition: color .15s ease-in-out;
-  -moz-transition: color .15s ease-in-out;
-  -webkit-transition: color .15s ease-in-out;
-  -o-transition: color .15s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out
+}
+
+.switch-color {
+  background: rgba(59, 187, 180, .95);
 }
 
 .navbar-nav.nav-menu {
   margin-right: -30px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    padding-bottom: 20px;
+    border-top: 1px solid #FFF;
+    padding-top: 10px;
+  }
 }
 
 .nav-menu li.activation {
@@ -241,6 +256,12 @@ i.ico {
 .nav-link {
   text-transform: capitalize;
   color: #FFF;
+  margin-left: 5px;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:not(:disabled):not(.disabled):active {
+  color: inherit;
+  background: #FFF;
 }
 
 @media (min-width: 992px) {
@@ -266,25 +287,31 @@ i.ico {
   display: block;
 }
 
-
 /* Section
 -----------------------------------------*/
 
 .headerHome {
   background: linear-gradient(rgba(59, 187, 180, .65), rgba(59, 187, 180, .65)), url(../../assets/img/skylineback.jpg) no-repeat bottom center;
   background-size: cover;
-  /*height: calc(100vh - 54px);*/
-  height: 100vh;
 }
 
 .jumbotron {
   background: none;
   color: #FFF;
-  padding-top: 210px;
+  padding-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .headerHome {
+    height: 100vh;
+  }
+  .jumbotron {
+    padding-top: 180px;
+  }
 }
 
 .jumbotron h1 ~ p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -320,6 +347,28 @@ i.ico {
   object-fit: cover;
 }
 
+.card-img-top.loan-img {
+  height: 120px;
+}
+
+@media (max-width: 767px) {
+  .navbar-expand-lg {
+    background: rgba(59, 187, 180, 0.9);
+  }
+}
+
+.loan-img img {
+  width: auto;
+  height: 100%;
+  object-fit: none;
+}
+
+.card-img-top.loan-img ~ .card-body h3 {
+  font-size: 1.24rem;
+  color: #1abc9c;
+  font-weight: 700;
+}
+
 @media (min-width: 992px) {
   .card-img-top {
     height: 170px;
@@ -327,14 +376,46 @@ i.ico {
 }
 
 .loan__box {
-  padding: 15px;
+  padding: 40px;
   height: 400px;
   border-radius: 5px;
-  background: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.95);
   box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.4);
+  color: #212536;
 }
 
-/* Footer`
+.loan__box a {
+  color: #007bff;
+}
+
+.supervision-box {
+  margin: 15px 0;
+}
+
+.supervision-logo {
+  height: 60px;
+  float: left;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .supervision-logo {
+    margin-right: 10px;
+  }
+
+}
+
+.supervision-logo:last-child {
+  height: 80px;
+}
+
+.supervision-logo img {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+}
+
+/* Footer
 -----------------------------------------*/
 
 footer {
@@ -356,10 +437,48 @@ footer ol {
   padding-left: 25px;
 }
 
+
+.footer__social {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.footer__social h5 {
+    font-size: 1rem;
+    color: #1abc9c;
+}
+
+.footer__social ul li{
+    list-style-type: none; 
+}
+
+.footer__social ul li a {
+  color: #dcecf5;
+  text-decoration: none;
+  display: block;
+}
+
+.footer__social ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom h5, .footer-bottom h6 {
+  font-weight: 700;
+}
+
+.icon-box {
+  display: inline-block;
+  width: 15px;
+  position: relative;
+  top: 4px;
+  margin-right: 12px;
+}
+
 .footer-background {
-  background: #FFF url(../../assets/img/jakarta-skyline.jpg) no-repeat bottom center;
+  background: #FFF url(../../assets/img/jakarta-skyline.png) no-repeat bottom center;
   background-size: 100%;
-  height: 600px;
+  height: 540px;
 }
 
 @media (max-width: 767px) {
