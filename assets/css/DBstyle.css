@@ -105,6 +105,7 @@ b, strong {
 
 .btn-primary {
   width: 200px;
+  background: #1abc9c;
   border-color: #1abc9c;
   margin-bottom: .5rem;
 }
