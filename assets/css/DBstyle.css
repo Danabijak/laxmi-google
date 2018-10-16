@@ -379,7 +379,7 @@ i.ico {
 
 .calculator label {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 992px) {
@@ -391,6 +391,10 @@ i.ico {
   }
   .calculator-row {
     margin-bottom: 30px;
+  }
+  .calculator label {
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 }
 
@@ -492,10 +496,9 @@ i.ico {
   color: #1abc9c;
   font-weight: 700;
   font-size: 1.5rem;
-  min-width: 150px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .calculator .offer .offer-box .title, .calculator .offer .offer-box .value {
       font-size: 1rem;
   }
