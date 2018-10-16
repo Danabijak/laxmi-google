@@ -6,7 +6,7 @@
 <!--[if (gte IE 10)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]--> 
 <head>
 
-    <title>DanaBijak - Danabijak</title>
+    <title>Danabijak - Danabijak</title>
 
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -50,70 +50,124 @@
 <body id="main-page">
 
 	<div class="wrapper">
-		<header id="header">
-
-			<nav class="navbar navbar-expand-lg fixed-top">
-				<div class="container-fluid">
-					
-					<a class="navbar-brand" href="#">
-						<img src="assets/img/logo-white.svg" alt="">
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-						<span class="navbar-toggler-icon"></span>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				
-					<div class="collapse navbar-collapse" id="navbarMenu">
-				
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item active">
-								<a class="nav-link btn" href="#">Tanya Jawab </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link btn" href="#">Caranya</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link btn btn-outline-default" href="#">Masuk</a>
-							</li>
-						</ul>
-					</div>
-					
-			  	</div><!-- /.container -->
-			</nav>
-
-		</header>
-
-
 		<section class="headerHome">
+			<header id="header">
+				<nav class="navbar navbar-expand-lg">	
+					<div class="container">
+						<a class="navbar-brand" href="#">
+							<img src="assets/img/logo-white.svg" alt="">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							<span class="navbar-toggler-icon"></span>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					
+						<div class="collapse navbar-collapse" id="navbarMenu">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link btn" href="#">Tanya Jawab</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link btn" href="#">Caranya</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link btn btn-outline-default" href="#">Masuk</a>
+								</li>
+							</ul>
+						</div>
+				  	</div><!-- /.container -->
+				</nav>
+			</header>
 			<div class="jumbotron">
 				<div class="container">
 					<div class="row text-center">
-						<div class="col-sm-10 offset-sm-1">
+						<div class="col-sm-10 offset-sm-1 col-xs-12">
 							<h1>PINJAMAN YANG ADIL, CEPAT DAN AMAN</h1>
-							<p>Dengan DanaBijak Dapatkan Pinjaman Aman, Cepat dan Terpercaya hingga Rp 3.000.000
+							<p>Dengan Danabijak Dapatkan Pinjaman Aman, Cepat dan Terpercaya hingga Rp 3.000.000
 							</p>
 							<div class="loan__box">
+								<form action="#" method="#" id="main-calculator" class="calculator">
+									<input type="hidden" name="" value=""> 
+									<div class="row calculator-row">
+										<div class="col-md">
+											<div class="form-group">
+												<div class="row">
+													<div class="col-md text-left">
+														<label>Jumlah Pinjaman</label>
+													</div>
+													<div class="col-md">
+														<select id="principal" name="principal" class="form-control">
+															<option value="1000000">Rp 1.000.000</option>
+															<option value="1100000">Rp 1.100.000</option>
+															<option value="1200000">Rp 1.200.000</option>
+															<option value="1300000">Rp 1.300.000</option>
+															<option value="1400000">Rp 1.400.000</option>
+															<option value="1500000">Rp 1.500.000</option>
+															<option value="1600000">Rp 1.600.000</option>
+															<option value="1700000">Rp 1.700.000</option>
+															<option value="1800000">Rp 1.800.000</option>
+															<option value="1900000">Rp 1.900.000</option>
+															<option value="2000000" selected="selected">Rp 2.000.000</option>
+															<option value="2100000">Rp 2.100.000</option>
+															<option value="2200000">Rp 2.200.000</option>
+															<option value="2300000">Rp 2.300.000</option>
+															<option value="2400000">Rp 2.400.000</option>
+															<option value="2500000">Rp 2.500.000</option>
+															<option value="2600000">Rp 2.600.000</option>
+															<option value="2700000">Rp 2.700.000</option>
+															<option value="2800000">Rp 2.800.000</option>
+															<option value="2900000">Rp 2.900.000</option>
+															<option value="3000000">Rp 3.000.000</option>
+														</select>
+													</div>
+												</div>
+												<div id="slider-Danabijak" class="d-none d-md-block ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div>
+													<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md offer">
+											<div class="offer-box">
+												<table class="table table-sm">
+													<tbody>
+														<tr>
+															<td class="title">Jumlah Pinjaman:</td>
+															<td id="amount"class="value">Rp 2.000.000</td>
+														</tr>
+														<tr>
+															<td class="title">Total Pengembalian:</td>
+															<td class="value">Rp 2.600.000</td>
+														</tr>
+														<tr>
+															<td class="title">Tanggal Jatuh Tempo:</td>
+															<td class="value">15 Nov 2018</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 
-								<div class="row">
-									<div class="col-sm-7 text-left">
-										<p>Pastikan Anda telah membaca dan menyetujui <a href="">Syarat serta Ketentuan</a> sebelum mengajukan pinjaman.</p>
-									</div> 
+									<div class="row">
+										<div class="col-md text-left">
+											<p>Pastikan Anda telah membaca dan menyetujui <a href="">Syarat serta Ketentuan</a> sebelum mengajukan pinjaman.</p>
+										</div> 
 
-									<div class="col-sm-5">
-										<button type="submit" class="btn btn-primary btn-lg">AJUKAN</button> <p><small>Nasabah?
-		                                <a href="/login">Login Disini</a></small>
-		                            	</p>
-		                            </div>
-		                        </div>
-								
+										<div class="col-md text-center">
+											<button type="submit" class="btn btn-primary btn-lg">AJUKAN</button> <p><small>Nasabah?
+			                                <a href="">Login Disini</a></small>
+			                            	</p>
+			                            </div>
+			                        </div><!-- /.row -->
+
+								</form>
+
 							</div>
 							<div class="supervision-box">
 								<div class="supervision-logo">
 									<img src="assets/img/OJK-Logo.png" alt="Logo OJK" />
-								</div>
-								<div class="supervision-logo">
-									<img src="assets/img/logo-ik.png" alt="Logo Inklusi Keuangan" />	
 								</div>
 							</div>
 						</div>
@@ -126,14 +180,14 @@
 
 		<section class="content-home">
 			<div class="container text-center">
-				<h2>Gunakan pinjaman DanaBijak anda untuk...</h2>
+				<h2>Gunakan pinjaman Danabijak anda untuk...</h2>
 				<div class="row">
 					<div class="col-sm-3 card">
 						<div class="card-img-top">
 							<img src="assets/img/pict1.jpg" alt="" />		
 						</div>
 						<div class="card-body">
-							<h3 class="card-title">Menutupi biaya kesehatan yang tdk terduga</h3>
+							<h3 class="card-title">Menutupi biaya kesehatan yang tidak terduga</h3>
 						</div>
 					</div>
 
@@ -256,11 +310,10 @@
 			</div>
 		</section>
 
-		<section class="content-home">
+		<section class="content-home why-danabijak">
 			<div class="container">
-				<h2 class="text-center">DanaBijak – Pinjaman yang adil, cepat dan aman</h2>
+				<h2 class="text-center">Danabijak – Pinjaman yang adil, cepat dan aman</h2>
 				<div class="row">
-					
 					<div class="col-sm-3">
 						<h4>Cepat dan Mudah</h4>
 						<p>Lengkapi aplikasi pinjaman kami dengan mudah hanya dalam kurun waktu kurang dari 8 menit.</p>

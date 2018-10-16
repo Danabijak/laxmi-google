@@ -72,15 +72,11 @@ a:focus {
 }
 a:focus, .btn.focus, .btn:focus, .btn:hover,
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
-  /*outline: thin dotted;
-  outline-offset: -4px;*/
   outline: none;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  /*outline: thin dotted;
-  outline-offset: -4px;*/
   outline: none;
 
 }
@@ -148,7 +144,6 @@ i.ico {
   height: 30px;
   margin: 10px auto 0;
 }
-
 
 /* Mulai nangkene
 ==================================*/
@@ -255,7 +250,7 @@ i.ico {
 } 
 
 .nav-link {
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #FFF;
   margin-left: 5px;
 }
@@ -299,7 +294,7 @@ i.ico {
 .jumbotron {
   background: none;
   color: #FFF;
-  padding-top: 100px;
+  padding: 100px 0 2rem;
 }
 
 @media (min-width: 992px) {
@@ -307,7 +302,7 @@ i.ico {
     height: 100vh;
   }
   .jumbotron {
-    padding-top: 180px;
+    padding-top: 120px;
   }
 }
 
@@ -328,7 +323,7 @@ i.ico {
 
 .content-home h3, .content-home h4, .content-home h5 {
   font-weight: normal;
-  font-size: 1.3rem;
+  font-size: 1.24rem;
   color: #343a40;
 }
 
@@ -352,12 +347,6 @@ i.ico {
   height: 120px;
 }
 
-@media (max-width: 767px) {
-  .navbar-expand-lg {
-    background: rgba(59, 187, 180, 0.9);
-  }
-}
-
 .loan-img img {
   width: auto;
   height: 100%;
@@ -370,50 +359,146 @@ i.ico {
   font-weight: 700;
 }
 
-@media (min-width: 992px) {
-  .card-img-top {
-    height: 170px;
-  }
-}
-
 .loan__box {
-  padding: 40px;
-  height: 400px;
+  padding: 15px;
   border-radius: 5px;
-  background: rgba(255,255,255,.95);
+  background: #FFF;
   box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.4);
   color: #212536;
+  position: relative;
+  z-index: 3;
 }
 
 .loan__box a {
   color: #007bff;
 }
 
+.calculator-row {
+  margin-bottom: 15px;
+}
+
+.calculator label {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 170px;
+  }
+  .loan__box {
+    padding: 40px;
+  }
+  .calculator-row {
+    margin-bottom: 30px;
+  }
+}
+
+.calculator .ui-slider .ui-slider-handle {
+  top: -8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border-color: #1abc9c;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.calculator .ui-slider .ui-slider-handle.ui-state-active, .calculator .ui-slider .ui-slider-handle:focus, .calculator .ui-slider .ui-slider-handle:hover {
+    background-color: #fff;
+    outline: none;
+}
+
+.calculator .ui-slider .ui-slider-range {
+    background: #1abc9c;
+    border-radius: 16px 0 0 16px;
+}
+
+.calculator .ui-slider {
+  margin-top: 15px;
+  margin-bottom: 45px;
+  height: 16px;
+  border-radius: 16px;
+  border: none;
+  background: #ddd;
+}
+
+.calculator .offer .offer-box {
+  border: 1px solid #e4e4e4;
+  background: #fafafa;
+  padding: 20px;
+  text-align: left;
+}
+
 .supervision-box {
   margin: 15px 0;
 }
 
+.supervision-box p {
+  color: #FFF;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+}
+
 .supervision-logo {
-  height: 60px;
+  height: 50px;
   float: left;
-  margin-right: 20px;
 }
 
 @media (max-width: 767px) {
   .supervision-logo {
-    margin-right: 10px;
+    height: 40px;
   }
-
+  .calculator .offer .offer-box {
+    padding: 10px;
+  }
 }
 
-.supervision-logo:last-child {
-  height: 80px;
+.why-danabijak h4 ~ p {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .why-danabijak h4 ~ p {
+    width: 90%;
+  }
 }
 
 .supervision-logo img {
   height: 100%;
   object-fit: cover;
   width: auto;
+}
+
+/* Table
+-----------------------------------------*/
+
+.table td, .table th {
+  border-top: none;
+}
+
+.calculator .offer .offer-box .title {
+    font-size: 1.1rem;
+}
+
+.calculator .offer .offer-box .table td, .calculator .offer .offer-box .table td {
+    border-top: none;
+    vertical-align: middle;
+}
+
+.calculator .offer .offer-box .value {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 1.5rem;
+  min-width: 150px;
+}
+
+@media (max-width: 767px) {
+  .calculator .offer .offer-box .title, .calculator .offer .offer-box .value {
+      font-size: 1rem;
+  }
 }
 
 /* Footer
@@ -437,7 +522,6 @@ footer h5, footer h6{
 footer ol {
   padding-left: 25px;
 }
-
 
 .footer__social {
   font-size: 1rem;
