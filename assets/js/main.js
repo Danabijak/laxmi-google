@@ -21,6 +21,5 @@ $( function() {
 			  	$( "#amount" ).text( "Rp " + addDot(ui.value.toString()) );
 			}
 		});
-	$("#amount").text( "Rp " + $("#slider-Danabijak").slider("ui"));
+	$("#amount").text("Rp " + $("#slider-Danabijak").slider("ui"));
 });
-

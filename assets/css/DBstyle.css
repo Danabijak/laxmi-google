@@ -34,7 +34,6 @@ body {
   font-size: 16px;
   overflow-x: hidden !important;
   line-height: 1.7;
-  /*color: #404041;*/
   -webkit-text-size-adjust:100%;
   -ms-text-size-adjust:100%;
 }
@@ -349,8 +348,6 @@ i.ico {
 
 .loan-img img {
   width: auto;
-  height: 100%;
-  object-fit: none;
 }
 
 .card-img-top.loan-img ~ .card-body h3 {
