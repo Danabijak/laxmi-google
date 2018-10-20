@@ -343,10 +343,15 @@ i.ico {
 }
 
 .card-img-top.loan-img {
-  height: 120px;
+  height: 90px;
+  margin-bottom: 15px;
 }
 
-.loan-img img {
+.card-img-top.min-loan-img {
+  height: 130px;
+}
+
+.loan-img img, .min-loan-img img {
   width: auto;
 }
 

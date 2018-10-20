@@ -11,15 +11,16 @@ function addDot(nStr) {
 }
 
 $( function() {
-	$("#slider-Danabijak").slider({
+	var slider = $("#slider-Danabijak").slider({
 			range: "min",
 			value: 2000000,
 			min: 1000000,
 			max: 3000000,
 			step: 100000,
 			slide: function( event, ui ) {
-			  	$( "#amount" ).text( "Rp " + addDot(ui.value.toString()) );
+			  	$( "#amount" ).text( "Rp " + addDot(ui.value.toString()));
+			  	$( "#amount-to-pay" ).text("Rp " + addDot(ui.value.toString() * 0.3 + ui.value));
 			}
 		});
-	$("#amount").text("Rp " + $("#slider-Danabijak").slider("ui"));
+	$("#amount").text("Rp " + slider.slider("ui"));
 });
