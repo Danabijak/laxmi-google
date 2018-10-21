@@ -293,13 +293,10 @@ i.ico {
 .jumbotron {
   background: none;
   color: #FFF;
-  padding: 80px 0 2rem;
+  padding: 80px 0 5rem;
 }
 
 @media (min-width: 992px) {
-  .headerHome {
-    height: 100vh;
-  }
   .jumbotron {
     padding-top: 120px;
   }
@@ -437,7 +434,8 @@ i.ico {
 }
 
 .supervision-box {
-  margin: 15px 0;
+  margin: 30px 0 0;
+  overflow: hidden;
 }
 
 .supervision-box p {
